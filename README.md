@@ -1,13 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# wqplot
+# testfunctions
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of wqplot is to allow you to visualize wq data with different
-kinds of plots.
+The goal of of this package is to test package building. There is some
+wq plotting code in here and a simple calculation.
 
 ## Installation
 
