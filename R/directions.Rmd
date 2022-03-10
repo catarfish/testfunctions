@@ -59,15 +59,20 @@ devtools::document()
 
 ```{r}
 use_package("dplyr")
-use_package_doc()
+use_package("ggplot2")
 ```
 
+What packages are needed?
 ```{r}
 use_import_from("ggplot")
 use_import_from("dplyr")
 ```
 
+Test functions
 ```{r}
 use_test("testfunctions.R")
+```
+```{r}
+devtools::check()
 ```
 
