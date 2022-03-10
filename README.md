@@ -75,12 +75,5 @@ summary(YBFMP_WQ)
 
 Functions
 
--   `Yearbox` plots a wq variable boxplot by station (StationCode) and
-    water year (WY)
--   `Monthbox` plots a wq variable boxplot by station and month
--   `VisPoint` plots a wq variable point plot by Datetime and Station
--   `Vishist` plots a wq variable histogram by Station and your bin of
-    interest
--   `PlotVars` plots two variables against each other and colors by
-    station
+-   `dogs_over_cats` function to agree whether dogs are better
 -   `c2f` converts celsius to fahrenheit
