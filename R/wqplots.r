@@ -1,13 +1,13 @@
 
-### Make a boxplot with any parameter by Station and WY.
-
+#' Make a boxplot with any parameter by Station and WY.
+l
 Yearbox <-  function(data,y) {
   y <- enquo(y)
   data %>%
-    ggplot() +
-    geom_boxplot(mapping = aes(factor(WY),!! y,fill = StationCode)) +
-    theme_bw() +
-    theme(panel.grid.major = element_blank(),
+    ggplot2::ggplot() +
+    ggplot2::geom_boxplot(mapping = aes(factor(WY),!! y,fill = StationCode)) +
+    ggplot2::theme_bw() +
+    ggplot2::theme(panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
           panel.border = element_blank(),
           axis.line = element_line(colour = "black"),
@@ -23,10 +23,10 @@ Yearbox <-  function(data,y) {
 Monthbox <-  function(data,y) {
   y <- enquo(y)
   data %>%
-    ggplot() +
-    geom_boxplot(mapping = aes(MonthAbb,!! y,fill = StationCode)) +
-    theme_bw() +
-    theme(panel.grid.major = element_blank(),
+    ggplot2::ggplot() +
+    ggplot2::geom_boxplot(mapping = aes(MonthAbb,!! y,fill = StationCode)) +
+    ggplot2::theme_bw() +
+    ggplot2::theme(panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
           panel.border = element_blank(),
           axis.line = element_line(colour = "black"),
@@ -42,10 +42,10 @@ Monthbox <-  function(data,y) {
 VisPoint <-  function(data,y) {
   y <- enquo(y)
   data %>%
-    ggplot() +
-    geom_point(mapping = aes(Datetime,!! y,col = StationCode), size = 2) +
-    theme_bw() +
-    theme(panel.grid.major = element_blank(),
+    ggplot2::ggplot() +
+    ggplot2::geom_point(mapping = aes(Datetime,!! y,col = StationCode), size = 2) +
+    ggplot2::theme_bw() +
+    ggplot2::theme(panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
           panel.border = element_blank(),
           axis.line = element_line(colour = "black"),
@@ -61,11 +61,11 @@ VisPoint <-  function(data,y) {
 VisHist <-  function(data,y, bin) {
   y <- enquo(y)
   data %>%
-    ggplot() +
-    geom_histogram(mapping = aes(!! y,col = StationCode),binwidth = bin, fill = "lightseagreen", colour = "lightgray") +
-    facet_wrap(~StationCode, scales = "free_x") +
-    theme_bw() +
-    theme(panel.grid.major = element_blank(),
+    ggplot2::ggplot() +
+    ggplot2::geom_histogram(mapping = aes(!! y,col = StationCode),binwidth = bin, fill = "lightseagreen", colour = "lightgray") +
+    ggplot2::facet_wrap(~StationCode, scales = "free_x") +
+    ggplot2::theme_bw() +
+    ggplot2::theme(panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
           panel.border = element_blank(),
           axis.line = element_line(colour = "black"),
@@ -81,11 +81,11 @@ PlotVars <- function(data,y, z) {
   y <- enquo(y)
   z <- enquo(z)
   data %>%
-    ggplot() +
-    geom_point(mapping = aes(y,z, col = StationCode)) +
-    theme_bw() +
+    ggplot2::ggplot() +
+    ggplot2::geom_point(mapping = aes(y,z, col = StationCode)) +
+    ggplot2::theme_bw() +
     #scale_colour_manual(values = c("#F3B2FF", "#106E83", "#FFC971", "#BAFF87")) +
-    theme(panel.grid.major = element_blank(),
+    ggplot2::theme(panel.grid.major = element_blank(),
           panel.border = element_blank(),
           axis.line = element_line(colour = "black"),
           plot.title = element_text(hjust=0.5),

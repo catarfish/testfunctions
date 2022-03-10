@@ -52,3 +52,17 @@ usethis::use_r("wqplots.r")
 usethis::use_r("celstofahr.r")
 ```
 
+```{r}
+use_package("dplyr")
+use_package_doc()
+```
+
+```{r}
+use_import_from("ggplot")
+use_import_from("dplyr")
+```
+
+```{r}
+use_test("testfunctions.R")
+```
+
