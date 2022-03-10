@@ -1,0 +1,54 @@
+---
+title: "package_code"
+author: "Catarina Pien"
+date: "3/10/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(devtools)
+library(usethis)
+library(available)
+```
+
+```{r}
+usethis::use_git()
+```
+
+```{r}
+usethis::use_github()
+```
+
+```{r}
+usethis::use_apache_license()
+```
+
+```{r}
+usethis::use_readme_rmd()
+devtools::build_readme()
+```
+
+* Run this, which will create a script and a folder. 
+* Add your raw data to folder
+* Run any code you want to convert your raw data to clean data. 
+
+```{r}
+use_data_raw()
+```
+
+* Run use_data() from your cleaning data R script to write your clean data file to the data folder. 
+```{r}
+usethis::use_data()
+```
+
+# Name your functions here. Will create an R script. 
+```{r}
+usethis::use_r("wqplots.r")
+usethis::use_r("celstofahr.r")
+```
+
