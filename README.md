@@ -21,7 +21,7 @@ devtools::install_github("catarfish/testfunctions")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+To start using the package:
 
 ``` r
 library(testfunctions)
@@ -73,11 +73,14 @@ summary(YBFMP_WQ)
 #>  NA's   :433      NA's   :435      NA's   :568
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+Functions
 
-Run plotting code: `Yearbox(YBFMP_WQ, Conductivity)` should produce a
-plot
+-   `Yearbox` plots a wq variable boxplot by station (StationCode) and
+    water year (WY)
+-   `Monthbox` plots a wq variable boxplot by station and month
+-   `VisPoint` plots a wq variable point plot by Datetime and Station
+-   `Vishist` plots a wq variable histogram by Station and your bin of
+    interest
+-   `PlotVars` plots two variables against each other and colors by
+    station
+-   `c2f` converts celsius to fahrenheit

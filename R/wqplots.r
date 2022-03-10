@@ -77,11 +77,12 @@ VisHist <-  function(data,y, bin) {
 }
 
 # Plot date vs. variable of interest, specifically for Lisbon
-PlotVars <- function(data,y) {
+PlotVars <- function(data,y, z) {
   y <- enquo(y)
+  z <- enquo(z)
   data %>%
     ggplot() +
-    geom_point(mapping = aes(Datetime,!! y, col = StationCode)) +
+    geom_point(mapping = aes(y,z, col = StationCode)) +
     theme_bw() +
     #scale_colour_manual(values = c("#F3B2FF", "#106E83", "#FFC971", "#BAFF87")) +
     theme(panel.grid.major = element_blank(),
