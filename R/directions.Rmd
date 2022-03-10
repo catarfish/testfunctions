@@ -52,6 +52,11 @@ usethis::use_r("wqplots.r")
 usethis::use_r("celstofahr.r")
 ```
 
+# Add roxygen2 documentation to your script, then run this function below to create files for your documentation.
+```{r}
+devtools::document()
+```
+
 ```{r}
 use_package("dplyr")
 use_package_doc()
