@@ -2,3 +2,6 @@
 
 export(c2f)
 export(dogs_over_cats)
+export(yearbox)
+importFrom(ggplot2,ggplot)
+importFrom(magrittr,"%>%")

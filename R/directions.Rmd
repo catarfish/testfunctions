@@ -16,18 +16,29 @@ library(usethis)
 library(available)
 ```
 
+Figure out where you want your package to be saved on your local computer
+```{r}
+setwd('..')
+getwd()
+create_package("testfunctions")
+```
+
+Connect go git
 ```{r}
 usethis::use_git()
 ```
 
+Connect to github
 ```{r}
 usethis::use_github()
 ```
 
+Add license
 ```{r}
 usethis::use_apache_license()
 ```
 
+Need to build readme when you update readme. 
 ```{r}
 usethis::use_readme_rmd()
 devtools::build_readme()
@@ -50,28 +61,41 @@ usethis::use_data()
 ```{r}
 usethis::use_r("wqplots.r")
 usethis::use_r("celstofahr.r")
+usethis::use_r("makeplot.r")
 ```
 
-# Add roxygen2 documentation to your script, then run this function below to create files for your documentation.
-```{r}
-devtools::document()
-```
+
 
 ```{r}
 use_package("dplyr")
 use_package("ggplot2")
 ```
 
+```{r}
+use_package_doc()
+```
+
 What packages are needed?
 ```{r}
-use_import_from("ggplot")
-use_import_from("dplyr")
+use_import_from("ggplot2", "ggplot")
+use_import_from("magrittr", "%>%") # will be in namespace and document for pipe
+
+# Put in import of DESCRIPTION file
+# package documentation usethis::use_package_doc() 
+# use_import_from(package, function) 
+# devtools::document() to put it in NAMESPACE
+```
+
+# Add roxygen2 documentation to your script, then run this function below to create files for your documentation. Will add to DESCRIPTION file, NAMESPACE file, functions. 
+```{r}
+devtools::document()
 ```
 
 Test functions
 ```{r}
 use_test("testfunctions.R")
 ```
+
 ```{r}
 devtools::check()
 ```
